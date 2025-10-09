@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './AddTaskForm.css';
 function AddTaskForm({ onAddTask }){
    const [taskName,setTaskName]=useState("");
    const [deadline,setDeadline]=useState("");
@@ -25,8 +26,9 @@ function AddTaskForm({ onAddTask }){
       return;
     }
        const tsk={taskName, deadline,priority}
-       onAddTask(tsk);
-      <p>Successfully Added: {tsk.taskName}</p>
+      onAddTask(tsk);
+       
+     
        setTaskName("");
        setDeadline("");
        setPriority("");

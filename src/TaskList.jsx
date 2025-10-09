@@ -1,4 +1,4 @@
-function TaskList({listOfTasks}){
+function TaskList({listOfTasks ,onToggle, onDelete}){
 
 
     return<div className="tasksList">
