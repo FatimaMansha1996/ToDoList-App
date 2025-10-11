@@ -1,45 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import AddTaskForm from './addTaskForm'
-import TaskList from './TaskList'
+import { useState } from "react";
+import "./App.css";
+import AddTaskForm from "./AddTaskForm";
+import TaskList from "./TaskList";
+
 function App() {
-  const [task, settask] = useState([]);
+  const [task, setTask] = useState([]);
 
-  const addTask = (taskData) => {
-  const { taskName, deadline, priority } = taskData;
-  const newTask = {
-    id: Date.now(),
-    taskName,
-    deadline,
-    priority,
-    completed: false,
+  const addTask = (newTask) => {
+    const taskWithId = {
+      id: Date.now(),
+      completed: false,
+      ...newTask,
+    };
+    setTask([...task, taskWithId]);
   };
 
-   settask([...task,newTask]);
+  const toggleTask = (id) => {
+  setTask(task.map(t => t.id === id ? { ...t, completed: !t.completed } : t));
+};
 
-  };
+const deleteTask = (id) => {
+  setTask(task.filter(t => t.id !== id));
+};
 
-  // Toggle completed status
-  const toggleComplete = (id) => {
-    settask(
-      task.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
-      )
-    );
-  };
-
-  // Delete a task
-  const deleteTask = (id) => {
-    settask(task.filter((task) => task.id !== id));
-  };
 
   return (
     <div className="app">
-      <h1>📝 My To-Do List</h1>
+      <h1>To-Do List</h1>
       <AddTaskForm onAddTask={addTask} />
-      
+      <TaskList
+        listOfTasks={task}
+        onToggle={toggleTask}
+        onDelete={deleteTask}
+      />
     </div>
   );
 }

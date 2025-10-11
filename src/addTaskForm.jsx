@@ -14,9 +14,7 @@ function AddTaskForm({ onAddTask }){
      setDeadline(deadln.target.value);
 
    }
-   const handlePriorityChange=(pri)=>{
-    setPriority(pri.target.value);
-   }
+   
   const handlesubmitButton=(e)=>{
      e.preventDefault(); // prevent page refresh
 
