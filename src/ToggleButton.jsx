@@ -3,7 +3,7 @@ function ToggleButton({ isCompleted, onToggle }) {
     <button
       onClick={onToggle}
       style={{
-        backgroundColor: isCompleted ? "#28a745" : "#6c757d",
+        backgroundColor: isCompleted ? "#a72874ff" : "#c37cabff",
         color: "white",
         border: "none",
         borderRadius: "6px",

@@ -1,0 +1,17 @@
+.taskItem {
+  background-color: rgb(158, 133, 204);
+  margin: 15px 0;   
+  padding: 15px;    
+  border-radius: 8px;
+  text-align: left;
+  list-style: none;
+}
+
+.taskItem.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.taskItem div {
+  margin-top: 10px; 
+}

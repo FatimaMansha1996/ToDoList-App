@@ -1,0 +1,18 @@
+.tasksList {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tasksList h1 {
+  color: #333;
+}
+
+.tasksList ul {
+  padding: 0;
+  list-style: none;
+}

@@ -3,7 +3,7 @@ function DeleteButton({ onDelete }) {
     <button
       onClick={onDelete}
       style={{
-        backgroundColor: "#dc3545",
+        backgroundColor:"#a72874ff",
         color: "white",
         border: "none",
         borderRadius: "6px",

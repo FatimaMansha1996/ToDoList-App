@@ -1,4 +1,6 @@
 import TaskItem from "./TaskItem";
+import './TaskList.css';
+
 
 function TaskList({ listOfTasks, onToggle, onDelete }) {
   if (!listOfTasks || listOfTasks.length === 0) {
