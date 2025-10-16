@@ -1,3 +1,4 @@
+/* Task list container */
 .tasksList {
   background-color: #fff;
   margin: 20px auto;
@@ -8,10 +9,12 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Heading inside task list */
 .tasksList h1 {
   color: #333;
 }
 
+/* Remove default list styles */
 .tasksList ul {
   padding: 0;
   list-style: none;
