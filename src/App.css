@@ -1,16 +1,45 @@
+/* Root container */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 500px;       /* Limit width for mobile */
+  margin: 0 auto;         /* Center on screen */
+  padding: 1rem;          /* Less padding for small screens */
   text-align: center;
   background-color: rgb(139, 119, 175);
   color: black;
+  box-sizing: border-box;
 }
 
+/* Card container styling */
+.card {
+  padding: 1.5em;          /* Reduce padding for smaller devices */
+  box-sizing: border-box;
+  width: 100%;             /* Full width inside root */
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.1);
+}
 
+/* Links styling */
+.read-the-docs {
+  color: #888;
+  word-wrap: break-word;   /* Prevent overflow on small screens */
+}
 
+/* Buttons styling */
+button {
+  margin: 4px;
+  padding: 8px 12px;        /* Slightly bigger for touch screens */
+  border-radius: 6px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  min-width: 80px;          /* Ensure buttons are clickable on mobile */
+  box-sizing: border-box;
+  font-size: 14px;
+}
 
-
+/* Logo spin animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -26,18 +55,23 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  #root {
+    padding: 0.5rem;
+  }
 
-.read-the-docs {
-  color: #888;
-}
-button {
-  margin: 4px;
-  padding: 6px 10px;
-  border-radius: 6px;
-  color: white;
-  border: none;
-  cursor: pointer;
+  .card {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;           /* Full width buttons for mobile */
+    margin: 4px 0;
+    font-size: 16px;       /* Slightly bigger text for readability */
+  }
+
+  .read-the-docs {
+    font-size: 14px;       /* Smaller text for links */
+  }
 }
