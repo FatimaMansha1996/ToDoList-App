@@ -7,6 +7,8 @@
   text-align: left;
   list-style: none;
   transition: all 0.3s ease;
+  width: 100%;           /* Make it full width */
+  box-sizing: border-box; /* Prevent overflow */
 }
 
 /* Style when the task is marked complete */
@@ -18,6 +20,9 @@
 /* Container for buttons */
 .buttonContainer {
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;       /* Wrap buttons if screen is small */
+  gap: 5px;
 }
 
 /* Common button styling */
@@ -28,8 +33,10 @@ button {
   cursor: pointer;
   font-size: 14px;
   color: white;
-  margin-right: 8px;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  flex: 1;               /* Make buttons flexible */
+  min-width: 100px;      /* Minimum width for readability */
+  box-sizing: border-box;
 }
 
 /* Toggle/Complete button styles */
@@ -55,4 +62,23 @@ button {
 .deleteButton:hover {
   background-color: #d32f2f;
   transform: scale(1.05);
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  .taskItem {
+    padding: 10px;
+  }
+
+  .buttonContainer {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  button {
+    width: 100%;            /* Buttons take full width */
+    font-size: 16px;        /* Slightly larger text for touch */
+    padding: 10px;
+    margin-right: 0;        /* Remove right margin */
+    margin-bottom: 5px;     /* Add spacing between stacked buttons */
+  }
 }

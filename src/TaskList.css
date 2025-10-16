@@ -7,15 +7,31 @@
   max-width: 500px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box; /* Prevent overflow */
 }
 
 /* Heading inside task list */
 .tasksList h1 {
   color: #333;
+  font-size: 20px;        /* Default heading size */
+  margin-bottom: 15px;
 }
 
 /* Remove default list styles */
 .tasksList ul {
   padding: 0;
   list-style: none;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  .tasksList {
+    padding: 10px;         /* Less padding for mobile */
+    width: 95%;            /* Almost full width */
+  }
+
+  .tasksList h1 {
+    font-size: 18px;       /* Slightly smaller heading */
+    margin-bottom: 10px;
+  }
 }
