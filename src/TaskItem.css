@@ -1,17 +1,58 @@
+/* Main task item box */
 .taskItem {
   background-color: rgb(158, 133, 204);
-  margin: 15px 0;   
-  padding: 15px;    
+  margin: 15px 0;
+  padding: 15px;
   border-radius: 8px;
   text-align: left;
   list-style: none;
+  transition: all 0.3s ease;
 }
 
+/* Style when the task is marked complete */
 .taskItem.completed {
   text-decoration: line-through;
   opacity: 0.6;
 }
 
-.taskItem div {
-  margin-top: 10px; 
+/* Container for buttons */
+.buttonContainer {
+  margin-top: 10px;
+}
+
+/* Common button styling */
+button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  margin-right: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Toggle/Complete button styles */
+.toggleButton {
+  background-color: #4caf50;
+}
+
+.toggleButton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* When a task is already completed */
+.toggleButton.done {
+  background-color: #9e9e9e;
+}
+
+/* Delete button styles */
+.deleteButton {
+  background-color: #f44336;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
 }
